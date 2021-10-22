@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+	<body>
+		<form th:action="@{/crearProducto}" method="post">
+			<fieldset>
+				<legend>Crear producto:</legend>
+				<p>Título:<input type="text" name="titulo" size="50"></p>
+				<p>Descripción:<input type="text" name="descripcion" size="150"></p>
+				<p>Precio:<input type="text" name="precio" size="5"></p>
+				<p>Porcentaje del descuento:<input type="text" name="descuento" size="5"></p>
+				<p><input type="submit" value="Enviar"></p>
+			</fieldset>
+		</form>
+	</body>
+</html>

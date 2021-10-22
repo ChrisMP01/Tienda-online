@@ -1,0 +1,15 @@
+<html lang="es">
+	<head>
+		<title>Tienda Online</title>
+	</head>
+	<body>
+		<h1>Productos de oferta</h1>
+		<ul th:each="producto: ${lista_prod}">
+			<!--fila 1:-->
+			<li th:text="${producto.nomProd}"></li>
+			<li th:text="${producto.descripcion}"></li>
+			<li th:text="${producto.precio}"></li>
+			<li th:text="${producto.descuento}"></li>
+		</ul>
+	</body>
+</html>

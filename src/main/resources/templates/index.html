@@ -1,15 +1,35 @@
 <html lang="es">
-	<head>
-		<title>Tienda Online</title>
-	</head>
-	<body>
-		<h1>Productos de oferta</h1>
-		<ul th:each="producto: ${lista_prod}">
-			<!--fila 1:-->
-			<li th:text="${producto.nomProd}"></li>
-			<li th:text="${producto.descripcion}"></li>
-			<li th:text="${producto.precio}"></li>
-			<li th:text="${producto.descuento}"></li>
-		</ul>
-	</body>
+
+<head>
+	<title>Tienda Online</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+
+<style>
+
+.card{
+	float:left;
+}
+
+</style>
+</head>
+
+<body>
+	<h1>Productos de oferta</h1>
+
+	<div th:each="producto: ${lista_prod}">
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" th:src="@{/images/default.png}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title" th:text="${producto.nomProd}"></h5>
+				<p class="card-text" th:text="${producto.descripcion}"></p>
+				<p class="card-text" th:text="${producto.precio}"></p>
+
+				<a href="#" class="btn btn-primary">Ver Producto</a>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
 </html>

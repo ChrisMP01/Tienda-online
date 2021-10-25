@@ -28,19 +28,19 @@ public class Productojdbc implements ProductoDao{
 	@Override
 	public int buscar(Producto producto) {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0;//jdbcTemplate.query("select idProd from productos where idProd=?", (rs,rowNum)->new Producto(producto.getIdProd()));
 	}
 
 	@Override
 	public int update(Producto producto) {
 		// TODO Auto-generated method stub
-		return 0;
+		return jdbcTemplate.update("update productos set titulo=?");
 	}
 
 	@Override
 	public int delete(Producto producto) {
 		// TODO Auto-generated method stub
-		return 0;
+		return jdbcTemplate.update("delete from productos where idProd=?",producto.getIdProd());
 	}
 
 	@Override

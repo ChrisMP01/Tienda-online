@@ -1,0 +1,16 @@
+<html lang="es">
+
+<head>
+	<title>Tienda Online</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+	</head>
+
+	<body>
+		<h1 th:text="${titulo_prod}"></h1>
+		<ul>
+			<li th:text="${producto.descripcion}"></li>
+			<li class="card-text" th:text="${producto.precio}"></li>
+		</ul>
+	</body>
+	
+</html>

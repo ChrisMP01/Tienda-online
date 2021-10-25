@@ -27,10 +27,6 @@ public class ControladorCrear {
 	@RequestMapping(value="crearProducto", method=RequestMethod.POST)
 	public String crearProducto(Model modelo, @RequestParam String titulo,@RequestParam String descripcion,@RequestParam float precio, @RequestParam int descuento) {
 		
-		modelo.addAttribute("",titulo);
-		modelo.addAttribute("",descripcion);
-		modelo.addAttribute("",descuento);
-		
 		Producto p = new Producto(null, titulo, descripcion, precio, descuento);
 		
 		productoDao.guardar(p);
